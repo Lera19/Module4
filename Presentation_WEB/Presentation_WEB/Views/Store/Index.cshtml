@@ -1,0 +1,50 @@
+﻿@model IList<BusinessLayer.ModelDTO.BookDTO>
+@{
+    ViewBag.Title = "Index";
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>BookName</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.ID</td>
+                <td>@book.NameBook</td>
+                <td>
+                    <ul>
+                        @foreach (var author in book.Authors)
+                        {
+                            <li>
+                                @author.First_Name
+                                @author.Last_Name
+                            </li>
+                        }
+                    </ul>
+
+                </td>
+                <td>
+                    @book.Categories.NameCategory
+
+                </td>
+
+                <td>
+                    <a href="/Store/EditBook/@book.ID">Edit book</a>
+                </td>
+                <td>
+                    @Html.ActionLink("Remove", "RemoveBook", new { id = @book.ID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/Store/CreateBook">Create new book</a>
+
