@@ -1,0 +1,17 @@
+﻿@model BusinessLayer.ModelsDTO.ProductDTO
+@{
+    ViewBag.Title = "EditProduct";
+}
+
+<h2>Edit Product</h2>
+@using(Html.BeginForm())
+{
+<div class="form-group">
+    @Html.LabelFor(model => model.Name)
+</div>
+<div>
+    @Html.EditorFor(model => model.Name)
+</div>
+<button type="submit">Save</button>
+}
+

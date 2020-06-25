@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{1B44A0C2-5EB8-4BAA-841B-4C3FE696B75A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B2CAB92B-EB7B-4D56-8339-2A80B5022D10} = {B2CAB92B-EB7B-4D56-8339-2A80B5022D10}
+		{A097DBA6-CA42-4A3C-A4B9-C754222D35A2} = {A097DBA6-CA42-4A3C-A4B9-C754222D35A2}
+		{B9BC8BCA-B2CA-44A7-8C77-7282B5D44071} = {B9BC8BCA-B2CA-44A7-8C77-7282B5D44071}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayerADO", "DataAccessLayerADO\DataAccessLayerADO.csproj", "{B9BC8BCA-B2CA-44A7-8C77-7282B5D44071}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B2CAB92B-EB7B-4D56-8339-2A80B5022D10} = {B2CAB92B-EB7B-4D56-8339-2A80B5022D10}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayerDapper", "DataAccessLayerDapper\DataAccessLayerDapper.csproj", "{A097DBA6-CA42-4A3C-A4B9-C754222D35A2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B2CAB92B-EB7B-4D56-8339-2A80B5022D10} = {B2CAB92B-EB7B-4D56-8339-2A80B5022D10}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{B2CAB92B-EB7B-4D56-8339-2A80B5022D10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersistanceLayer", "PersistanceLayer\PersistanceLayer.csproj", "{11EE728E-6F57-4E56-9BFE-5268C3ED20E6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B2CAB92B-EB7B-4D56-8339-2A80B5022D10} = {B2CAB92B-EB7B-4D56-8339-2A80B5022D10}
+		{1B44A0C2-5EB8-4BAA-841B-4C3FE696B75A} = {1B44A0C2-5EB8-4BAA-841B-4C3FE696B75A}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B44A0C2-5EB8-4BAA-841B-4C3FE696B75A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B44A0C2-5EB8-4BAA-841B-4C3FE696B75A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B44A0C2-5EB8-4BAA-841B-4C3FE696B75A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B44A0C2-5EB8-4BAA-841B-4C3FE696B75A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9BC8BCA-B2CA-44A7-8C77-7282B5D44071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9BC8BCA-B2CA-44A7-8C77-7282B5D44071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9BC8BCA-B2CA-44A7-8C77-7282B5D44071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9BC8BCA-B2CA-44A7-8C77-7282B5D44071}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A097DBA6-CA42-4A3C-A4B9-C754222D35A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A097DBA6-CA42-4A3C-A4B9-C754222D35A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A097DBA6-CA42-4A3C-A4B9-C754222D35A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A097DBA6-CA42-4A3C-A4B9-C754222D35A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2CAB92B-EB7B-4D56-8339-2A80B5022D10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2CAB92B-EB7B-4D56-8339-2A80B5022D10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2CAB92B-EB7B-4D56-8339-2A80B5022D10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2CAB92B-EB7B-4D56-8339-2A80B5022D10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11EE728E-6F57-4E56-9BFE-5268C3ED20E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11EE728E-6F57-4E56-9BFE-5268C3ED20E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11EE728E-6F57-4E56-9BFE-5268C3ED20E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11EE728E-6F57-4E56-9BFE-5268C3ED20E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {45DF5CE4-968E-41E2-BA24-1671F4EE8A57}
+	EndGlobalSection
+EndGlobal

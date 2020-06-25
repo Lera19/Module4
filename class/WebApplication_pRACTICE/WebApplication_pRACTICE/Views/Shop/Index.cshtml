@@ -1,0 +1,47 @@
+﻿@model IList<BusinessLayer.ModelsDTO.ProductDTO> 
+@{
+    ViewBag.Title = "Index";
+}
+<a href="/Shop/CreateProduct">Create new product</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>ProductName</th>
+                <th>Group</th>
+                <th>Edit</th>
+                <th>Details</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var product in Model)
+            {
+                <tr>
+                    <td>@product.ID</td>
+                    <td>@product.Name</td>
+                    <td>
+                        <ul>
+                            @foreach (var group in product.Groups)
+                            {
+                                <li>
+                                    @group.Name
+                                </li>
+                            }
+                            </ul>
+                        
+                    </td>
+                    <td>
+                        <a href="/Shop/EditProduct/@product.ID">Edit product</a>
+                    </td>
+                    <td>
+                    <a href="/Shop/ProductDetails/@product.ID">Details product</a>
+                    </td>
+                    <td>
+                        @Html.ActionLink("Remove", "RemoveProduct", new { id = @product.ID})
+                    </td>
+                </tr>
+            }
+        </tbody>
+</table>
+

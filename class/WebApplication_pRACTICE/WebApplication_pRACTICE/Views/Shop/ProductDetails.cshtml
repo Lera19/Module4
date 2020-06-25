@@ -1,0 +1,37 @@
+﻿@model BusinessLayer.ModelsDTO.ProductDTO
+@{
+    ViewBag.Title = "ProductDetails";
+}
+
+<h2>Product Details</h2>
+
+<a href="/Shop/CreateProduct">Create new product</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>ProductName</th>
+            <th>Group</th>
+        </tr>
+    </thead>
+    <tbody>
+            <tr>
+                <td>@Model.ID</td>
+                <td>@Model.Name</td>
+                <td>
+                    <ul>
+                        @foreach (var group in Model.Groups)
+                        {
+                            <li>
+                                @group.Name
+                            </li>
+                        }
+                    </ul>
+
+                </td>
+
+</tr>
+      
+    </tbody>
+</table>
+
